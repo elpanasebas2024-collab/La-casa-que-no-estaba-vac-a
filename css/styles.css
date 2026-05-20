@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: #e7e3dd;
+  background: radial-gradient(circle at top, #111 0%, #080808 40%, #050505 100%);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.85)),
+    url('../img/casa_fondo_1.png') center/cover fixed no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.15), transparent 55%);
+  pointer-events: none;
+}
+
+.acto1,
+.acto2,
+.acto3,
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.acto1 {
+  background:
+    linear-gradient(180deg, rgba(20, 18, 15, 0.72), rgba(4, 4, 4, 0.72)),
+    url('../img/bosque.jpeg') center/cover fixed no-repeat;
+  color: #f4efe8;
+}
+
+.acto1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.18));
+  pointer-events: none;
+}
+
+.acto2 {
+  background: radial-gradient(circle at top right, rgba(30, 30, 35, 0.65), transparent 55%), #12131a;
+  color: #ddd8d2;
+}
+
+.acto2 {
+  background:
+    linear-gradient(180deg, rgba(20, 18, 15, 0.72), rgba(4, 4, 4, 0.72)),
+    url('../img/fondo_oscuro.jpg') center/cover fixed no-repeat;
+  color: #f4efe8;
+}
+
+.acto3 {
+  background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+  color: #f0ece7;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.95);
+  color: #bbb;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+p {
+  line-height: 1.85;
+  color: #ddd;
+}
+
+img,
+video {
+  transition: transform 0.8s ease, filter 0.8s ease, box-shadow 0.8s ease;
+  filter: grayscale(12%) contrast(1.05) brightness(0.95);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+img:hover,
+video:hover {
+  transform: scale(1.03);
+  filter: grayscale(0%) contrast(1.08) brightness(1);
+}
+
+.section-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, transparent 30%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+}
+
+section,
+.footer {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible,
+.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section {
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent 40%);
+  pointer-events: none;
+}
+
+.acto3 {
+  position: relative;
+}
+
+.acto3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.acto3 {
+  background:
+    linear-gradient(180deg, rgba(20, 18, 15, 0.72), rgba(4, 4, 4, 0.72)),
+    url('../img/manos_fondo_fin.jpg') center/cover fixed no-repeat;
+  color: #f4efe8;
+}
+
+
+
+
+@media (max-width: 992px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
