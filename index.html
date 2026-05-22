@@ -10,6 +10,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/efecto_scroll.js" defer></script>
   </head>
 
   <body>
@@ -154,7 +163,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer text-center text-white py-4 scroll-section section-overlay">
+    <footer
+      class="footer text-center text-white py-4 scroll-section section-overlay"
+    >
       <div class="container">
         <p class="mb-1">Integrantes: Sebastian Villa Tarquino</p>
         <p class="mb-0">Diseño Digital II — Narrativa Hipermedia</p>
@@ -162,15 +173,18 @@
     </footer>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('.scroll-section');
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, { threshold: 0.2 });
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".scroll-section");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
 
         sections.forEach((section) => observer.observe(section));
       });

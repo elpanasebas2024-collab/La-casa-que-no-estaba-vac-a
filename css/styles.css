@@ -4,11 +4,15 @@
 
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Special Elite", serif;
   color: #e7e3dd;
   background: radial-gradient(circle at top, #111 0%, #080808 40%, #050505 100%);
   min-height: 100%;
   overflow-x: hidden;
+
+  transition:
+    background 1s ease,
+    filter 1s ease;
 }
 
 html {
@@ -78,8 +82,14 @@ html {
 
 h1,
 h2 {
-  font-weight: 900;
-  letter-spacing: 0.03em;
+  font-family: "Creepster", cursive;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.5),
+    0 0 20px rgba(255, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.9);
+
+  animation: pulseText 4s infinite alternate;
 }
 
 h1 {
@@ -162,5 +172,19 @@ section::before {
 @media (max-width: 992px) {
   .hero {
     background-attachment: scroll;
+  }
+}
+
+@keyframes pulseText {
+  from {
+    text-shadow:
+      0 0 10px rgba(255, 0, 0, 0.3),
+      0 0 20px rgba(0, 0, 0, 0.7);
+  }
+
+  to {
+    text-shadow:
+      0 0 20px rgba(255, 0, 0, 0.8),
+      0 0 35px rgba(0, 0, 0, 1);
   }
 }
