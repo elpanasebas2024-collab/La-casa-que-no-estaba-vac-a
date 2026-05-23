@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
+  /* border: 1px blue solid; */
 }
+
 
 body {
   margin: 0;
