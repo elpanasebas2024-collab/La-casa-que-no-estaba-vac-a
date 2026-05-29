@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* border: 1px blue solid; */
 }
 
 
@@ -45,6 +44,10 @@ html {
   overflow: hidden;
 }
 
+.acto1,.acto2,.acto3{
+  text-align: justify;
+}
+
 .acto1 {
   background:
     linear-gradient(180deg, rgba(20, 18, 15, 0.72), rgba(4, 4, 4, 0.72)),
@@ -60,10 +63,6 @@ html {
   pointer-events: none;
 }
 
-.acto2 {
-  background: radial-gradient(circle at top right, rgba(30, 30, 35, 0.65), transparent 55%), #12131a;
-  color: #ddd8d2;
-}
 
 .acto2 {
   background:
